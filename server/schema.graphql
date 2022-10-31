@@ -1,0 +1,113 @@
+type serviceData {
+    activity_id : String
+    sr_problem_description : String
+    service_request_number : String
+    activity_type : String
+    asset_install_date : String
+    cause : String
+    component_subsystem : String
+    installed_country : String
+    modality : String
+    problem_found : String
+    psi_code: String
+    service_request_status : String
+    service_request_type : String
+    sr_error_flag : String
+    resolution_code_action_taken: String
+    sr_close_date : String
+    sr_open_date : String
+    system_id : String
+}
+
+type sensorData {
+    timestamp : String
+    sensor_01 : String
+    sensor_02 : String
+    sensor_03 : String
+    sensor_04 : String
+    sensor_05 : String
+    sensor_06 : String
+    sensor_07 : String
+    sensor_08 : String
+    sensor_09 : String
+    sensor_10 : String
+    machine_status : String
+}
+
+type Result {
+    sensor_01 : String
+    sensor_02 : String
+    sensor_03 : String
+    sensor_04 : String
+    sensor_05 : String
+    sensor_06 : String
+    sensor_07 : String
+    sensor_08 : String
+    sensor_09 : String
+    sensor_10 : String
+    machine_status : String
+}
+
+type DetailedResult {
+    activity_id : String
+    sr_problem_description : String
+    service_request_number : String
+    activity_type : String
+    asset_install_date : String
+    cause : String
+    component_subsystem : String
+    installed_country : String
+    modality : String
+    problem_found : String
+    psi_code: String
+    service_request_status : String
+    service_request_type : String
+    sr_error_flag : String
+    resolution_code_action_taken: String
+    sr_close_date : String
+    sr_open_date : String
+    system_id : String
+    machine_data : [sensorData]
+}
+
+type HM {
+     sensor_01 : String
+     sensor_02 : String
+     machine_status : String
+}
+
+ type Magnet {
+     sensor_03 : String
+     sensor_04 : String
+     sensor_05 : String
+     machine_status : String
+}
+
+ type Detector {
+     sensor_06 : String
+     sensor_07 : String
+     machine_status : String
+}
+
+ type Tube {
+     sensor_08 : String
+     sensor_09 : String
+     sensor_10 : String
+     machine_status : String
+}
+
+union Machine = HM | Magnet | Detector | Tube
+
+type Query {
+    serviceHistoryData : [serviceData]
+    sr_instance(activity_id : String) : [serviceData]
+    sensorData : [sensorData]
+    sd_instance(timestamp : String) : [sensorData]
+    result(sr : String) : [Machine]
+}
+
+
+
+
+
+
