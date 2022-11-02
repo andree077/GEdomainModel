@@ -1,0 +1,18 @@
+#banner {
+    height: 90px;
+    margin: 0 auto;
+    padding: 0;
+    background: #160f0f ;
+    color: #333;
+  }
+  
+
+
+h1 {
+    margin: 0;
+    padding: 25px;
+    text-align:center;
+    background: transparent;
+    color: #fff;
+  }
+

@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+    max-width:900px;
+    width: 100%;
+    margin: 2rem auto; 
+    /* border-collapse:collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family:sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15) */
+
+}
+table th, table td {
+    border: 2px solid #ddd;
+    padding: 8px; 
+} 
+
+/* table thead tr{
+    background-color: #009879;
+    color: #ffffff;
+    text-align:left;
+}
+table th,table td{
+    padding: 12px 15px;
+} */
+
